@@ -18,5 +18,10 @@ export default defineConfig({
     environment: 'jsdom',
     globals: true,
     setupFiles: './src/setupTests.ts',
+    coverage: {
+      provider: 'v8',
+      reporter: ['text', 'html'],
+      exclude: ['node_modules/', 'src/main.tsx', 'src/App.tsx', 'src/mirage/'], // Excluir arquivos de cobertura que não são componentes puros
+    },
   },
 })
