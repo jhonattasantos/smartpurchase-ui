@@ -38,7 +38,7 @@ const CompanyRegistration: React.FC = () => {
 
         <FieldGroup>
           <FieldSet>
-            <FieldLegend>Formulário de Cadastro</FieldLegend>
+          <h1>Cadastro de Empresa</h1>
             <FieldDescription>Preencha os dados da empresa abaixo:</FieldDescription>
 
             <FieldGroup>
