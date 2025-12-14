@@ -15,6 +15,7 @@ export const useRegisterCompany = () => {
       await companyService.submit(companyData);
       setIsSuccess(true);
     } catch (err) {
+      console.error(err);
       setError('Ocorreu um erro ao cadastrar a empresa.');
     } finally {
       setIsLoading(false);
