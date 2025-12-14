@@ -8,7 +8,7 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Bem-vindo ao SmartPurchase</h1>
+      <h1>Bem-vindo ao SmartPurchase ({import.meta.env.MODE})</h1>
       <Input placeholder="Pesquisar..." />
       <nav>
         <Button onClick={() => navigate("/company/register")}>Cadastrar Empresa</Button>

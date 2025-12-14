@@ -1,4 +1,3 @@
-import React from 'react';
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
@@ -7,7 +6,7 @@ import CompanyRegistration from './pages/Company/Register';
 import { makeServer } from './mirage';
 import './index.css'
 
-if (process.env.NODE_ENV === 'development') {
+if (import.meta.env.MODE === 'development') {
   makeServer()
 }
 
