@@ -3,8 +3,6 @@ import type { AppRegistry } from "../types";
 import companyRoutes from "./company";
 
 export default function (this: Server<AppRegistry>) {
-  this.namespace = "api";
-
   companyRoutes.call(this);
 }
 

@@ -2,11 +2,11 @@ import { Response, Server } from "miragejs";
 import type { AppRegistry } from "../types";
 
 export default function (this: Server<AppRegistry>) {
-  this.get("/companies", (schema) => {
+  this.get("/api/companies", (schema) => {
     return schema.all("company");
   });
 
-  this.post("/companies", (schema, request) => {
+  this.post("/api/companies", (schema, request) => {
     const attrs = JSON.parse(request.requestBody);
 
     if (!attrs.name || !attrs.cnpj || !attrs.email) {
