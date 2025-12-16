@@ -1,11 +1,14 @@
 import * as React from "react"
 import {
   Controller,
+  FormProvider,
+  useFormContext,
+} from "react-hook-form"
+
+import type {
   ControllerProps,
   FieldPath,
   FieldValues,
-  FormProvider,
-  useFormContext,
 } from "react-hook-form"
 
 import { cn } from "@/lib/utils"

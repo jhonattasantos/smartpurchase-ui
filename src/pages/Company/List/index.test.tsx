@@ -16,7 +16,7 @@ const mockCompanies: Company[] = [
 
 describe('CompanyListPage', () => {
   it('should display loading state initially', () => {
-    (useFetchCompanies as jest.Mock).mockReturnValue({
+    (useFetchCompanies as vi.Mock).mockReturnValue({
       companies: undefined,
       isLoading: true,
       isError: false,
@@ -28,7 +28,7 @@ describe('CompanyListPage', () => {
   });
 
   it('should display an error message if fetching fails', () => {
-    (useFetchCompanies as jest.Mock).mockReturnValue({
+    (useFetchCompanies as vi.Mock).mockReturnValue({
       companies: undefined,
       isLoading: false,
       isError: true,
@@ -41,7 +41,7 @@ describe('CompanyListPage', () => {
   });
 
   it('should display the company list when data is fetched successfully', () => {
-    (useFetchCompanies as jest.Mock).mockReturnValue({
+    (useFetchCompanies as vi.Mock).mockReturnValue({
       companies: mockCompanies,
       isLoading: false,
       isError: false,
@@ -54,7 +54,7 @@ describe('CompanyListPage', () => {
   });
 
   it('should display a message when no companies are available', () => {
-    (useFetchCompanies as jest.Mock).mockReturnValue({
+    (useFetchCompanies as vi.Mock).mockReturnValue({
       companies: [],
       isLoading: false,
       isError: false,

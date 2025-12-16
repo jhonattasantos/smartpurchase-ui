@@ -12,7 +12,7 @@ const mockSubmitCompany = vi.fn();
 describe('CompanyRegistration', () => {
   it('should call submitCompany with form data on submit', async () => {
     // Arrange
-    (useRegisterCompany as jest.Mock).mockReturnValue({
+    (useRegisterCompany as vi.Mock).mockReturnValue({
       submitCompany: mockSubmitCompany,
       isLoading: false,
       error: null,
@@ -43,7 +43,7 @@ describe('CompanyRegistration', () => {
 
   it('should display success message when isSuccess is true', () => {
     // Arrange
-    (useRegisterCompany as jest.Mock).mockReturnValue({
+    (useRegisterCompany as vi.Mock).mockReturnValue({
       submitCompany: mockSubmitCompany,
       isLoading: false,
       error: null,
@@ -62,7 +62,7 @@ describe('CompanyRegistration', () => {
 
   it('should display error message when an error is present', () => {
     // Arrange
-    (useRegisterCompany as jest.Mock).mockReturnValue({
+    (useRegisterCompany as vi.Mock).mockReturnValue({
       submitCompany: mockSubmitCompany,
       isLoading: false,
       error: 'CNPJ já cadastrado',
@@ -81,7 +81,7 @@ describe('CompanyRegistration', () => {
 
   it('should disable the button when isLoading is true', () => {
     // Arrange
-    (useRegisterCompany as jest.Mock).mockReturnValue({
+    (useRegisterCompany as vi.Mock).mockReturnValue({
       submitCompany: mockSubmitCompany,
       isLoading: true,
       error: null,
