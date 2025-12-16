@@ -12,6 +12,7 @@ function App() {
       <Input placeholder="Pesquisar..." />
       <nav>
         <Button onClick={() => navigate("/company/register")}>Cadastrar Empresa</Button>
+        <Button onClick={() => navigate("/companies")} variant="secondary" className="ml-2">Listar Empresas</Button>
       </nav>
     </div>
   )

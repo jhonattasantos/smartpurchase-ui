@@ -1,5 +1,5 @@
-import company from "./company";
+import companyFactory from "./company";
 
 export default {
-  company,
+  company: companyFactory,
 };

@@ -16,12 +16,17 @@ export default defineConfig({
   },
   test: {
     environment: 'jsdom',
-    globals: true,
+    globals: false,
     setupFiles: './src/setupTests.ts',
     coverage: {
       provider: 'v8',
       reporter: ['text', 'html'],
       exclude: ['node_modules/', 'src/main.tsx', 'src/App.tsx', 'src/mirage/'], // Excluir arquivos de cobertura que não são componentes puros
+    },
+    server: {
+      deps: {
+        inline: ['@tanstack/react-query'],
+      },
     },
   },
 })
